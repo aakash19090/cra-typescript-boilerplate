@@ -1,0 +1,43 @@
+// Reference: https://www.youtube.com/watch?v=ZXW6Jn6or1w&t=579s
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "extends": [
+        "react-app",
+        "react-app/jest",
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "rules": {
+        "indent": ["error", 4], // for 4-space indentation
+        "no-console": "error",
+        "react/jsx-filename-extension": 0,
+        "no-unused-vars": "error",
+        "prettier/prettier": "error",
+        "func-names": "off", // Disables the rule for function expressions to have names
+        "object-shorthand": "off", // Disables object shorthands in object literals
+        "class-methods-use-this": "off", // Disables using of 'this' in each class method
+        "import/no-dynamic-require": "off",
+        "react/function-component-definition": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        "no-shadow": "off",
+        "react/destructuring-assignment": "off"
+    }
+}
